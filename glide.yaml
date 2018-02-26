@@ -1,0 +1,3 @@
+package: github.com/rongfengliang/mysqldemo
+import:
+- package: github.com/go-sql-driver/mysql

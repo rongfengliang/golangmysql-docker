@@ -1,0 +1,12 @@
+version: '3'
+services:
+  cli:
+    image: mysqldemo
+    depends_on:
+      - db
+  db:
+    image: mydb
+    env_file:
+      - ./mysql.env
+    ports:
+      - 3308:3306
