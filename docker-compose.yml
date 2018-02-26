@@ -2,10 +2,14 @@ version: '3'
 services:
   cli:
     image: mysqldemo
+    build:
+      context: .
     depends_on:
       - db
   db:
     image: mydb
+    build:
+      context: ./db
     env_file:
       - ./mysql.env
     ports:
